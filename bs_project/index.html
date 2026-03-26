@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: url("bg.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+.hero h1 span {
+  color: #ffc107;
+}
+.hero p {
+  color: #ddd;
+}
+
+/* BUTTON */
+.btn-custom {
+  padding: 12px 28px;
+  border-radius: 30px;
+}
+
+/* HERO IMAGE */
+.hero-img {
+  max-width: 330px;
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+  50% { transform: translateY(-14px); }
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 0;
+}
+
+/* SKILLS */
+.skill-box {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.skill-box:hover {
+  transform: translateY(-10px);
+}
+
+/* CARDS */
+.project-card {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  color: #aaa;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Eresh</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#internships">Internships</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="container hero-content">
+    <div class="row align-items-center">
+      <div class="col-lg-6 text-white">
+        <h5 class="text-warning" style="font-size:40px ;"> Portfolio</h5>
+        <h1 class="fw-bold">My Name Is <span>Eresh D Komkar</span></h1>
+        <h4 class="text-info">AI & ML Engineer | Web Developer</h4>
+        <p>I build intelligent systems, modern websites and AI-powered apps And i recently learn how to creat webpage using HTML,CSS and Bootstrap.</p>
+
+        <a href="Final CV Eresh.pdf" download class="btn btn-warning btn-custom me-2">Download CV</a>
+        <a href="#contact" class="btn btn-outline-light btn-custom">Contact</a>
+
+        <div class="mt-4 fs-3">
+          <i class="bi bi-github me-3"></i>
+          <i class="bi bi-linkedin me-3"></i>
+          <i class="bi bi-envelope"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">My Skills</h2>
+    <div class="row g-4 text-center">
+      <div class="col-6 col-md-3"><div class="skill-box"><i class="bi bi-filetype-html fs-1 text-danger"></i><h6>HTML</h6></div></div>
+      <div class="col-6 col-md-3"><div class="skill-box"><i class="bi bi-filetype-css fs-1 text-primary"></i><h6>CSS</h6></div></div>
+      <div class="col-6 col-md-3"><div class="skill-box"><i class="bi bi-filetype-js fs-1 text-warning"></i><h6>JavaScript</h6></div></div>
+      <div class="col-6 col-md-3"><div class="skill-box"><i class="bi bi-cpu fs-1 text-success"></i><h6>Machine Learning</h6></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERNSHIPS -->
+<section id="internships" class="section">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Internship Experience</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered text-center align-middle">
+        <thead class="table-dark">
+          <tr><th>#</th><th>Company</th><th>Role</th><th>Duration</th><th>Certificate</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>AIS Solution Tech</td><td>Web Intern</td><td>Jan–Mar 2024</td><td><a href="Exp letter Eresh Deepak komkar.pdf" download class="btn btn-warning btn-sm">Download</a></td></tr>
+          <tr><td>2</td><td>XYZ AI Labs</td><td>ML Intern</td><td>Apr–Jun 2024</td><td><a href="cert2.pdf" download class="btn btn-warning btn-sm">Download</a></td></tr>
+       
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certificates" class="section bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Certificates</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card project-card shadow text-center">
+          <img src="ms.png" class="card-img-top">
+          <div class="card-body">
+            <h6>Microsoft</h6>
+            <a href="cert1.pdf" download class="btn btn-warning btn-sm">Download</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card project-card shadow text-center">
+          <img src="AIS.png" class="card-img-top">
+          <div class="card-body">
+            <h6>Machine Learning</h6>
+            <a href="cert2.pdf" download class="btn btn-warning btn-sm">Download</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card project-card shadow text-center">
+          <img src="cert3.jpg" class="card-img-top">
+          <div class="card-body">
+            <h6>Java Programming</h6>
+            <a href="cert3.pdf" download class="btn btn-warning btn-sm">Download</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="card project-card shadow"><img src="aivtuber.png"><div class="card-body"><h6>AI VTuber</h6></div></div></div>
+      <div class="col-md-4"><div class="card project-card shadow"><img src="pf.png"><div class="card-body"><h6>Portfolio</h6></div></div></div>
+      <div class="col-md-4"><div class="card project-card shadow"><img src="ml.png"><div class="card-body"><h6>ML license plate reader System</h6></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section bg-dark text-white">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Contact Me</h2>
+    <input class="form-control mb-3" placeholder="Name">
+    <input class="form-control mb-3" placeholder="Email">
+    <textarea class="form-control mb-3" placeholder="Message"></textarea>
+    <button class="btn btn-warning w-100">Send</button>
+  </div>
+</section>
+
+<footer class="text-center py-3">
+  © 2026 Eresh | AIML Engineer
+</footer>
+
+</body>
+</html>
